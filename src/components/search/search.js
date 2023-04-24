@@ -12,8 +12,16 @@ const Search = ({ onSearchChange }) => {
         `${GEO_API_URL}/cities?&namePrefix=${inputValue}`,
         geoApiOptions
       );
-      const response_first = await response.json();
-      return console.log(response_first);
+      const response_data = await response.json();
+      console.log(response_data);
+      return {
+        options: response_data.data.map((city) => {
+          return {
+            value: `${city.latitude} ${city.longitude}`,
+            label: `${city.name}, ${city.countryCode}`,
+          };
+        }),
+      };
     } catch (err) {
       return console.error(err);
     }
