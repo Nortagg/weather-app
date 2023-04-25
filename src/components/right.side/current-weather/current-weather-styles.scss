@@ -19,17 +19,26 @@
     }
     .parameter-row-wind {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+      .wind-icon {
+        color: whitesmoke;
+        font-size: 20px;
+      }
       .wind-side {
         color: #576c69;
+        margin: 0;
       }
       .wind-speed {
         color: #576c69;
+        margin: 0;
       }
     }
     .city {
       color: #c6d1cf;
-      margin-top: 5px;
-      margin-bottom: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
   }
   .bottom-display {

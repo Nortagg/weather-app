@@ -33,15 +33,13 @@ const Search = ({ onSearchChange }) => {
   };
 
   return (
-    <div className="bar">
-      <AsyncPaginate
-        placeholder="Search for city"
-        debounceTimeout={600}
-        value={search}
-        onChange={handleOnChange}
-        loadOptions={loadOptions}
-      />
-    </div>
+    <AsyncPaginate
+      placeholder="Search for city"
+      debounceTimeout={600}
+      value={search}
+      onChange={handleOnChange}
+      loadOptions={loadOptions}
+    />
   );
 };
 export default Search;

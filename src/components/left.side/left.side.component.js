@@ -7,6 +7,11 @@ const LeftSide = ({ data }) => {
         <p>25 April 2023</p>
         <p>11:00</p>
       </div>
+      <img
+        alt="weather"
+        className="weather-icon"
+        src={`icons/${data && data.weather[0].icon}.png`}
+      />
       <p>{data && data.weather[0].description}</p>
       <div className="bottom-display-wheater-info-line">
         <div className="by-3h-container">
