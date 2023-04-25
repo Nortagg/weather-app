@@ -1,7 +1,7 @@
 .wrapper-right {
   display: flex;
-  justify-content: center;
-  //align-items: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #283133bb;
   width: 25%;
   height: 100%;

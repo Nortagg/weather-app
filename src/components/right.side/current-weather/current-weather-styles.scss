@@ -1,0 +1,52 @@
+.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  .top-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .temperature {
+      font-size: 60px;
+      font-weight: 500;
+      letter-spacing: -5px;
+      color: #f7f5f6;
+      margin-bottom: 5px;
+      margin-top: 40px;
+    }
+    .parameter-row-wind {
+      display: flex;
+      .wind-side {
+        color: #576c69;
+      }
+      .wind-speed {
+        color: #576c69;
+      }
+    }
+    .city {
+      color: #c6d1cf;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+  }
+  .bottom-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0px -1px 1px 0px rgba(99, 98, 98, 0.75);
+    .forecast-5days {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .forecast-title {
+        font-size: 18px;
+      }
+    }
+  }
+}
