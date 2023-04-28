@@ -1,0 +1,35 @@
+.forecast-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 14px;
+  .icon-small {
+    width: 30px;
+    height: 30px;
+  }
+  .date-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .forecast-date {
+      margin: 0;
+    }
+    .forecast-weather-display {
+      margin: 0;
+    }
+  }
+  .min-max-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .forecast-tempmin {
+      margin: 0;
+    }
+    .forecast-tempmax {
+      margin: 0;
+    }
+  }
+}

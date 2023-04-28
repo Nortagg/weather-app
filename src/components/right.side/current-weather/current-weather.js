@@ -34,19 +34,6 @@ const CurrentWeather = ({ data }) => {
         </div>
         <p className="city">{data.city}</p>
       </div>
-      <div className="bottom-display">
-        <div className="forecast-5days">
-          <h1 className="forecast-title">The Next Days Forecast</h1>
-          <p className="5-days-option">5 days</p>
-        </div>
-        <div className="days-wrapper">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-        </div>
-      </div>
     </div>
   );
 };

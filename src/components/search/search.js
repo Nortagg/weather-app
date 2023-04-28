@@ -13,7 +13,6 @@ const Search = ({ onSearchChange }) => {
         geoApiOptions
       );
       const response_data = await response.json();
-      console.log(response_data);
       return {
         options: response_data.data.map((city) => {
           return {

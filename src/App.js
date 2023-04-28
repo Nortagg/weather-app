@@ -28,8 +28,6 @@ function App() {
       })
       .catch((err) => console.log(err));
   };
-  console.log(currentWeather);
-  console.log(forecast);
   return (
     <div className="container">
       <div className="wrapper-left-right">
@@ -37,6 +35,7 @@ function App() {
         <RightSide
           currentWeather={currentWeather}
           handleOnSearchChange={handleOnSearchChange}
+          forecast={forecast}
         />
       </div>
     </div>
