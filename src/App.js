@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="container">
       <div className="wrapper-left-right">
-        <LeftSide data={currentWeather} />
+        <LeftSide data={currentWeather} forecast={forecast} />
         <RightSide
           currentWeather={currentWeather}
           handleOnSearchChange={handleOnSearchChange}

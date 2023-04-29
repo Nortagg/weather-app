@@ -13,38 +13,40 @@ const ForecastDays = ({ data }) => {
     },
     {
       name: moment().add(1, "days"),
-      imgSrc: `icons/${data.list[1].weather[0].icon}.png`,
-      display: data.list[1].weather[0].description,
-      tempMin: data.list[1].main.temp_min,
-      tempMax: data.list[1].main.temp_max,
+      imgSrc: `icons/${data.list[8].weather[0].icon}.png`,
+      display: data.list[8].weather[0].description,
+      tempMin: data.list[8].main.temp_min,
+      tempMax: data.list[8].main.temp_max,
     },
     {
       name: moment().add(2, "days"),
-      imgSrc: `icons/${data.list[2].weather[0].icon}.png`,
-      display: data.list[2].weather[0].description,
-      tempMin: data.list[2].main.temp_min,
-      tempMax: data.list[2].main.temp_max,
+      imgSrc: `icons/${data.list[16].weather[0].icon}.png`,
+      display: data.list[16].weather[0].description,
+      tempMin: data.list[16].main.temp_min,
+      tempMax: data.list[16].main.temp_max,
     },
     {
       name: moment().add(3, "days"),
-      imgSrc: `icons/${data.list[3].weather[0].icon}.png`,
-      display: data.list[3].weather[0].description,
-      tempMin: data.list[3].main.temp_min,
-      tempMax: data.list[3].main.temp_max,
+      imgSrc: `icons/${data.list[24].weather[0].icon}.png`,
+      display: data.list[24].weather[0].description,
+      tempMin: data.list[24].main.temp_min,
+      tempMax: data.list[24].main.temp_max,
     },
     {
       name: moment().add(4, "days"),
-      imgSrc: `icons/${data.list[4].weather[0].icon}.png`,
-      display: data.list[4].weather[0].description,
-      tempMin: data.list[4].main.temp_min,
-      tempMax: data.list[4].main.temp_max,
+      imgSrc: `icons/${data.list[32].weather[0].icon}.png`,
+      display: data.list[32].weather[0].description,
+      tempMin: data.list[32].main.temp_min,
+      tempMax: data.list[32].main.temp_max,
     },
   ];
   return (
-    <div>
-      <h1 className="5-days-title">5 days</h1>
-      {WEEK_DAYS.map((day) => (
-        <div className="forecast-card">
+    <div className="content">
+      <div className="border-middle"></div>
+      <h1 className="forecast-days">The Next Days Forecast</h1>
+      <h2 className="five-days-title">5 days</h2>
+      {WEEK_DAYS.map((day, index) => (
+        <div className="forecast-card" key={index}>
           <img alt="weather" className="icon-small" src={day.imgSrc} />
           <div className="date-display-container">
             <p className="forecast-date">{day.name.format("dddd, MMMM D")}</p>
