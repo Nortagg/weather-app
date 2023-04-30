@@ -45,20 +45,22 @@ const ForecastDays = ({ data }) => {
       <div className="border-middle"></div>
       <h1 className="forecast-days">The Next Days Forecast</h1>
       <h2 className="five-days-title">5 days</h2>
-      {WEEK_DAYS.map((day, index) => (
-        <div className="forecast-card" key={index}>
-          <img alt="weather" className="icon-small" src={day.imgSrc} />
-          <div className="date-display-container">
-            <p className="forecast-date">{day.name.format("dddd, MMMM D")}</p>
-            <p className="forecast-weather-display">{day.display}</p>
+      <div className="wrapper-forecast-card">
+        {WEEK_DAYS.map((day, index) => (
+          <div className="forecast-card" key={index}>
+            <img alt="weather" className="icon-small" src={day.imgSrc} />
+            <div className="date-display-container">
+              <p className="forecast-date">{day.name.format("dddd, MMMM D")}</p>
+              <p className="forecast-weather-display">{day.display}</p>
+            </div>
+            <div className="border-forecast"></div>
+            <div className="min-max-container">
+              <p className="forecast-tempmin">{Math.round(day.tempMin)}°</p>
+              <p className="forecast-tempmax">{Math.round(day.tempMax)}°</p>
+            </div>
           </div>
-          <div className="border-forecast"></div>
-          <div className="min-max-container">
-            <p className="forecast-tempmin">{Math.round(day.tempMin)}°</p>
-            <p className="forecast-tempmax">{Math.round(day.tempMax)}°</p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

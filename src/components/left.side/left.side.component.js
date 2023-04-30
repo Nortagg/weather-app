@@ -3,48 +3,58 @@ import moment from "moment/moment";
 
 const LeftSide = ({ data, forecast }) => {
   if (!data) return null;
+  const currentHour = moment().hour();
+  const hoursSinceLastPeriod = currentHour % 3;
+  const periodsSinceLastPeriod = Math.floor(currentHour / 3);
+
+  if (hoursSinceLastPeriod >= 3) {
+    const nextHour = periodsSinceLastPeriod * 3 + 3;
+    moment().hour(nextHour).minute(0).second(0);
+  }
+
   const threeHours = [
     {
-      name: moment().hour(21),
+      name: moment().hour(0),
       imgSrc: `icons/${forecast.list[0].weather[0].icon}.png`,
       temperature: forecast.list[0].main.temp,
     },
     {
-      name: moment().hour(0),
+      name: moment().hour(3),
       imgSrc: `icons/${forecast.list[1].weather[0].icon}.png`,
       temperature: forecast.list[1].main.temp,
     },
     {
-      name: moment().hour(3),
+      name: moment().hour(6),
       imgSrc: `icons/${forecast.list[2].weather[0].icon}.png`,
       temperature: forecast.list[2].main.temp,
     },
     {
-      name: moment().hour(6),
+      name: moment().hour(9),
       imgSrc: `icons/${forecast.list[3].weather[0].icon}.png`,
       temperature: forecast.list[3].main.temp,
     },
     {
-      name: moment().hour(9),
+      name: moment().hour(12),
       imgSrc: `icons/${forecast.list[4].weather[0].icon}.png`,
       temperature: forecast.list[4].main.temp,
     },
     {
-      name: moment().hour(12),
+      name: moment().hour(15),
       imgSrc: `icons/${forecast.list[5].weather[0].icon}.png`,
       temperature: forecast.list[5].main.temp,
     },
     {
-      name: moment().hour(15),
+      name: moment().hour(18),
       imgSrc: `icons/${forecast.list[6].weather[0].icon}.png`,
       temperature: forecast.list[6].main.temp,
     },
     {
-      name: moment().hour(18),
+      name: moment().hour(21),
       imgSrc: `icons/${forecast.list[7].weather[0].icon}.png`,
       temperature: forecast.list[7].main.temp,
     },
   ];
+
   return (
     <div className="wrapper-left">
       <div className="top-display-date-clock">
@@ -53,10 +63,24 @@ const LeftSide = ({ data, forecast }) => {
         <p className="time">{moment().format("HH:mm")}</p>
       </div>
       <div className="weather-icon-description">
-        <div className="weather-icon">
-          <img alt="weather" src={`icons/${data.weather[0].icon}.png`} />
-        </div>
+        <img
+          alt="weather"
+          className="weather-icon"
+          src={`icons/${data.weather[0].icon}.png`}
+        />
         <p className="weather-description">{data.weather[0].description}</p>
+      </div>
+      <div className="sides-info">
+        <div className="left-info">
+          <p>Humidity: {data.main.humidity}%</p>
+          <p>Pressure: {data.main.pressure}mb</p>
+          <p>Visibility: {data.visibility / 1000}km</p>
+        </div>
+        <div className="right-info">
+          <p>Feels like: {data.main.feels_like}°C</p>
+          <p>Temp.Max: {data.main.temp_max}°C</p>
+          <p>Temp.Min: {data.main.temp_min}°C</p>
+        </div>
       </div>
       <div className="border_bottom"></div>
       <div className="wrapper-bottom-display-wheater-info">
