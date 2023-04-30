@@ -14,42 +14,66 @@ const LeftSide = ({ data, forecast }) => {
 
   const threeHours = [
     {
-      name: moment().hour(0),
+      name: moment()
+        .hour(currentHour - (currentHour % 3))
+        .minute(0)
+        .second(0),
       imgSrc: `icons/${forecast.list[0].weather[0].icon}.png`,
       temperature: forecast.list[0].main.temp,
     },
     {
-      name: moment().hour(3),
+      name: moment()
+        .hour(currentHour - (currentHour % 3) + 3)
+        .minute(0)
+        .second(0),
       imgSrc: `icons/${forecast.list[1].weather[0].icon}.png`,
       temperature: forecast.list[1].main.temp,
     },
     {
-      name: moment().hour(6),
+      name: moment()
+        .hour(currentHour - (currentHour % 3) + 6)
+        .minute(0)
+        .second(0),
       imgSrc: `icons/${forecast.list[2].weather[0].icon}.png`,
       temperature: forecast.list[2].main.temp,
     },
     {
-      name: moment().hour(9),
+      name: moment()
+        .hour(currentHour - (currentHour % 3) + 9)
+        .minute(0)
+        .second(0),
       imgSrc: `icons/${forecast.list[3].weather[0].icon}.png`,
       temperature: forecast.list[3].main.temp,
     },
     {
-      name: moment().hour(12),
+      name: moment()
+        .hour(currentHour - (currentHour % 3) + 12)
+        .minute(0)
+        .second(0),
       imgSrc: `icons/${forecast.list[4].weather[0].icon}.png`,
       temperature: forecast.list[4].main.temp,
     },
     {
-      name: moment().hour(15),
+      name: moment()
+        .hour(currentHour - (currentHour % 3) + 15)
+        .minute(0)
+        .second(0),
       imgSrc: `icons/${forecast.list[5].weather[0].icon}.png`,
       temperature: forecast.list[5].main.temp,
     },
     {
-      name: moment().hour(18),
+      name: moment()
+        .hour(currentHour - (currentHour % 3) + 18)
+        .minute(0)
+        .second(0),
       imgSrc: `icons/${forecast.list[6].weather[0].icon}.png`,
       temperature: forecast.list[6].main.temp,
     },
     {
-      name: moment().hour(21),
+      name: moment()
+        .hour(currentHour - (currentHour % 3) + 21)
+        .minute(0)
+        .second(0),
       imgSrc: `icons/${forecast.list[7].weather[0].icon}.png`,
       temperature: forecast.list[7].main.temp,
     },
