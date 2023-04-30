@@ -1,7 +1,16 @@
 import "./left.side.component.styles.scss";
 import moment from "moment/moment";
+import { useState, useEffect } from "react";
 
 const LeftSide = ({ data, forecast }) => {
+  const [date, setDate] = useState(moment());
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDate(moment());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   if (!data) return null;
   const currentHour = moment().hour();
   const hoursSinceLastPeriod = currentHour % 3;
@@ -82,28 +91,31 @@ const LeftSide = ({ data, forecast }) => {
   return (
     <div className="wrapper-left">
       <div className="top-display-date-clock">
-        <p className="date">{moment().format("Do MMMM YYYY")} </p>
+        <p className="date">{date.format("Do MMMM YYYY")}</p>
         <div className="border_one"></div>
-        <p className="time">{moment().format("HH:mm")}</p>
+        <p className="time">{date.format("HH:mm")}</p>
       </div>
-      <div className="weather-icon-description">
-        <img
-          alt="weather"
-          className="weather-icon"
-          src={`icons/${data.weather[0].icon}.png`}
-        />
-        <p className="weather-description">{data.weather[0].description}</p>
-      </div>
-      <div className="sides-info">
-        <div className="left-info">
-          <p>Humidity: {data.main.humidity}%</p>
-          <p>Pressure: {data.main.pressure}mb</p>
-          <p>Visibility: {data.visibility / 1000}km</p>
-        </div>
-        <div className="right-info">
-          <p>Feels like: {data.main.feels_like}°C</p>
-          <p>Temp.Max: {data.main.temp_max}°C</p>
-          <p>Temp.Min: {data.main.temp_min}°C</p>
+      <div className="sides-weather-description-wrapper">
+        <div className="sides-info">
+          <div className="weather-icon-description">
+            <img
+              alt="weather"
+              className="weather-icon"
+              src={`icons/${data.weather[0].icon}.png`}
+            />
+            <p className="weather-description">{data.weather[0].description}</p>
+          </div>
+          <div className="left-info">
+            <p>Humidity: {data.main.humidity}%</p>
+            <p>Pressure: {data.main.pressure}hPa</p>
+            <p>Visibility: {data.visibility / 1000}km</p>
+          </div>
+          <div className="bordred-sides"></div>
+          <div className="right-info">
+            <p>Feels like: {Math.round(data.main.feels_like)}°C</p>
+            <p>Temp.Max: {Math.round(data.main.temp_max)}°C</p>
+            <p>Temp.Min: {Math.round(data.main.temp_min)}°C</p>
+          </div>
         </div>
       </div>
       <div className="border_bottom"></div>

@@ -1,5 +1,6 @@
 import "./current-weather-styles.scss";
 import { BsWind } from "react-icons/bs";
+import { useState, useEffect } from "react";
 
 const CurrentWeather = ({ data }) => {
   const getWindDirection = (degree) => {
@@ -21,16 +22,27 @@ const CurrentWeather = ({ data }) => {
       return "Northwest";
     }
   };
+  const [temperature, setTemperature] = useState(Math.round(data.main.temp));
+  const [windSpeed, setwindSpeed] = useState(data.wind.speed);
+  const [windDirection, setWindDirection] = useState(
+    getWindDirection(data.wind.deg)
+  );
+  useEffect(() => {
+    setTemperature(Math.round(data.main.temp));
+    setwindSpeed(data.wind.speed);
+    setWindDirection(getWindDirection(data.wind.deg));
+  }, [data]);
+
   return (
     <div className="weather">
       <div className="top-display">
-        <p className="temperature">{Math.round(data.main.temp)}°C</p>
+        <p className="temperature">{temperature}°C</p>
         <div className="parameter-row-wind">
           <div className="wind-icon">
             <BsWind />
           </div>
-          <p className="wind-side"> {getWindDirection(data.wind.deg)},</p>
-          <p className="wind-speed">{data.wind.speed}m/s</p>
+          <p className="wind-side"> {windDirection},</p>
+          <p className="wind-speed">{windSpeed}m/s</p>
         </div>
         <p className="city">{data.city}</p>
       </div>
