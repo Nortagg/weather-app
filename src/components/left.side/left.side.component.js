@@ -11,7 +11,9 @@ const LeftSide = ({ data, forecast }) => {
     return () => clearInterval(interval);
   }, []);
 
-  if (!data) return null;
+  if (!data)
+    return <div className="Loading">Add location to get weather info.</div>;
+
   const currentHour = moment().hour();
   const hoursSinceLastPeriod = currentHour % 3;
   const periodsSinceLastPeriod = Math.floor(currentHour / 3);
@@ -113,8 +115,8 @@ const LeftSide = ({ data, forecast }) => {
           <div className="bordred-sides"></div>
           <div className="right-info">
             <p>Feels like: {Math.round(data.main.feels_like)}°C</p>
-            <p>Temp.Max: {Math.round(data.main.temp_max)}°C</p>
-            <p>Temp.Min: {Math.round(data.main.temp_min)}°C</p>
+            <p>Temp Max: {Math.round(data.main.temp_max)}°C</p>
+            <p>Temp Min: {Math.round(data.main.temp_min)}°C</p>
           </div>
         </div>
       </div>
@@ -142,4 +144,5 @@ const LeftSide = ({ data, forecast }) => {
     </div>
   );
 };
+
 export default LeftSide;
