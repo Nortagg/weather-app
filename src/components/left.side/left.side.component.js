@@ -98,15 +98,15 @@ const LeftSide = ({ data, forecast }) => {
         <p className="time">{date.format("HH:mm")}</p>
       </div>
       <div className="sides-weather-description-wrapper">
+        <div className="weather-icon-description">
+          <img
+            alt="weather"
+            className="weather-icon"
+            src={`icons/${data.weather[0].icon}.png`}
+          />
+          <p className="weather-description">{data.weather[0].description}</p>
+        </div>
         <div className="sides-info">
-          <div className="weather-icon-description">
-            <img
-              alt="weather"
-              className="weather-icon"
-              src={`icons/${data.weather[0].icon}.png`}
-            />
-            <p className="weather-description">{data.weather[0].description}</p>
-          </div>
           <div className="left-info">
             <p>Humidity: {data.main.humidity}%</p>
             <p>Pressure: {data.main.pressure}hPa</p>

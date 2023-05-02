@@ -15,8 +15,7 @@
     border: solid gray 10px;
     gap: 1px;
     margin-top: 5rem;
-    @media screen and (max-width: 1000px) {
-      flex-direction: column;
+    @media screen and (max-width: 1250px) {
       flex-direction: column-reverse;
     }
   }

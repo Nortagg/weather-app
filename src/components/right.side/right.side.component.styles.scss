@@ -5,9 +5,12 @@
   background-color: #283133f3;
   width: 25%;
   height: 100%;
-  @media screen and (max-width: 1000px) {
-    height: 50%;
+  @media screen and (max-width: 1250px) {
+    height: 40%;
     width: 100%;
     flex-direction: column;
+  }
+  @media screen and (max-width: 530px) {
+    height: 50%;
   }
 }
