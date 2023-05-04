@@ -8,36 +8,36 @@ const ForecastDays = ({ data }) => {
       name: moment(),
       imgSrc: `icons/${data.list[0].weather[0].icon}.png`,
       display: data.list[0].weather[0].description,
-      tempMin: data.list[0].main.temp_min,
       tempMax: data.list[0].main.temp_max,
+      tempMin: data.list[0].main.temp_min,
     },
     {
       name: moment().add(1, "days"),
       imgSrc: `icons/${data.list[8].weather[0].icon}.png`,
       display: data.list[8].weather[0].description,
-      tempMin: data.list[8].main.temp_min,
       tempMax: data.list[8].main.temp_max,
+      tempMin: data.list[12].main.temp_min,
     },
     {
       name: moment().add(2, "days"),
       imgSrc: `icons/${data.list[16].weather[0].icon}.png`,
       display: data.list[16].weather[0].description,
-      tempMin: data.list[16].main.temp_min,
       tempMax: data.list[16].main.temp_max,
+      tempMin: data.list[20].main.temp_min,
     },
     {
       name: moment().add(3, "days"),
       imgSrc: `icons/${data.list[24].weather[0].icon}.png`,
       display: data.list[24].weather[0].description,
-      tempMin: data.list[24].main.temp_min,
       tempMax: data.list[24].main.temp_max,
+      tempMin: data.list[28].main.temp_min,
     },
     {
       name: moment().add(4, "days"),
       imgSrc: `icons/${data.list[32].weather[0].icon}.png`,
       display: data.list[32].weather[0].description,
-      tempMin: data.list[32].main.temp_min,
       tempMax: data.list[32].main.temp_max,
+      tempMin: data.list[36].main.temp_min,
     },
   ];
   return (
@@ -55,8 +55,8 @@ const ForecastDays = ({ data }) => {
             </div>
             <div className="border-forecast"></div>
             <div className="min-max-container">
-              <p className="forecast-tempmin">{Math.round(day.tempMin)}°</p>
               <p className="forecast-tempmax">{Math.round(day.tempMax)}°</p>
+              <p className="forecast-tempmin">{Math.round(day.tempMin)}°</p>
             </div>
           </div>
         ))}

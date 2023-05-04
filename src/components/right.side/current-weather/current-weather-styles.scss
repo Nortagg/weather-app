@@ -5,7 +5,8 @@
   flex-direction: column;
   width: 100%;
   @media screen and (max-width: 1250px) {
-    height: 15%;
+    height: 10%;
+    margin: 5px 0px;
   }
   .top-display {
     display: flex;
@@ -13,11 +14,8 @@
     align-items: center;
     flex-direction: column;
     @media screen and (max-width: 1250px) {
-      gap: 4rem;
-      flex-direction: row;
-    }
-    @media screen and (max-width: 750px) {
       gap: 2rem;
+      flex-direction: row;
     }
     @media screen and (max-width: 530px) {
       gap: 1rem;
@@ -33,15 +31,9 @@
         font-size: 50px;
       }
       @media screen and (max-width: 1250px) {
-        font-size: 40px;
-        margin: 0;
-      }
-      @media screen and (max-width: 750px) {
-        font-size: 40px;
-      }
-      @media screen and (max-width: 530px) {
         letter-spacing: -2px;
         font-size: 30px;
+        margin: 0;
       }
       @media screen and (max-width: 400px) {
         font-size: 22px;
@@ -57,6 +49,9 @@
         font-size: 20px;
         animation: fadeLeftToRight 5s ease forwards;
         animation-iteration-count: infinite;
+        @media screen and (max-width: 1250px) {
+          font-size: 16px;
+        }
         @media screen and (max-width: 530px) {
           font-size: 14px;
         }
@@ -74,6 +69,9 @@
       .wind-side {
         color: #576c69;
         margin: 0;
+        @media screen and (max-width: 1250px) {
+          font-size: 14px;
+        }
         @media screen and (max-width: 530px) {
           font-size: 12px;
         }
@@ -84,6 +82,9 @@
       .wind-speed {
         color: #576c69;
         margin: 0;
+        @media screen and (max-width: 1250px) {
+          font-size: 14px;
+        }
         @media screen and (max-width: 530px) {
           font-size: 12px;
         }
@@ -96,6 +97,9 @@
       color: #f7f5f6;
       margin-top: 10px;
       margin-bottom: 12px;
+      @media screen and (max-width: 1250px) {
+        font-size: 14px;
+      }
       @media screen and (max-width: 530px) {
         font-size: 12px;
       }

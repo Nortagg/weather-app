@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 
   .wrapper-left-right {
     display: flex;
@@ -12,11 +13,11 @@
     width: 70%;
     height: 80vh;
     border-radius: 0.8rem;
-    border: solid gray 10px;
+    border: solid rgb(172, 160, 160) 10px;
     gap: 1px;
-    margin-top: 5rem;
     @media screen and (max-width: 1250px) {
       flex-direction: column-reverse;
+      gap: 0px;
     }
   }
 }

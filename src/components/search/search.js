@@ -13,16 +13,14 @@ const Search = ({ onSearchChange }) => {
         geoApiOptions
       );
       const response_data = await response.json();
-      return {
-        options: response_data.data.map((city) => {
-          return {
-            value: `${city.latitude} ${city.longitude}`,
-            label: `${city.name}, ${city.countryCode}`,
-          };
-        }),
-      };
-    } catch (err) {
-      return console.error(err);
+      const options = response_data.data.map((city) => ({
+        value: `${city.latitude} ${city.longitude}`,
+        label: `${city.name}, ${city.countryCode}`,
+      }));
+      return { options };
+    } catch (error) {
+      console.error(error);
+      return { options: [] };
     }
   };
 
@@ -30,17 +28,50 @@ const Search = ({ onSearchChange }) => {
     setSearch(searchData);
     onSearchChange(searchData);
   };
-
+  const customStyles = {
+    control: (provided, state) => ({
+      ...provided,
+      backgroundColor: "#010d0fc",
+      borderRadius: "8px",
+      border: "1px solid #576c69",
+      width: "100%",
+      boxShadow: state.isFocused ? "0 0 0 2px #576c69" : null,
+      "&:hover": {
+        backgroundColor: "#010d0c",
+      },
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: "#010d0f",
+      color: state.isFocused ? "whitesmoke" : null,
+      color: "whitesmoke",
+      "&:hover": {
+        backgroundColor: "#a7b1b1",
+      },
+    }),
+    singleValue: (provided) => ({
+      ...provided,
+      color: "whitesmoke",
+    }),
+    menu: (provided) => ({
+      ...provided,
+      backgroundColor: "#010d0fc",
+    }),
+    placeholder: (provided) => ({
+      ...provided,
+      color: "whitesmoke",
+    }),
+  };
   return (
-    <div className="wrapper-search">
-      <AsyncPaginate
-        placeholder="Search for city"
-        debounceTimeout={600}
-        value={search}
-        onChange={handleOnChange}
-        loadOptions={loadOptions}
-      />
-    </div>
+    <AsyncPaginate
+      placeholder="Search cities..."
+      className="search-input"
+      debounceTimeout={600}
+      value={search}
+      onChange={handleOnChange}
+      loadOptions={loadOptions}
+      styles={customStyles}
+    />
   );
 };
 export default Search;

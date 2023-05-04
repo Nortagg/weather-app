@@ -12,7 +12,11 @@ const LeftSide = ({ data, forecast }) => {
   }, []);
 
   if (!data)
-    return <div className="Loading">Add location to get weather info.</div>;
+    return (
+      <div className="loading">
+        Enter location to <br /> get weather info.
+      </div>
+    );
 
   const currentHour = moment().hour();
   const hoursSinceLastPeriod = currentHour % 3;
@@ -92,19 +96,21 @@ const LeftSide = ({ data, forecast }) => {
 
   return (
     <div className="wrapper-left">
-      <div className="top-display-date-clock">
-        <p className="date">{date.format("Do MMMM YYYY")}</p>
-        <div className="border_one"></div>
-        <p className="time">{date.format("HH:mm")}</p>
-      </div>
-      <div className="sides-weather-description-wrapper">
-        <div className="weather-icon-description">
-          <img
-            alt="weather"
-            className="weather-icon"
-            src={`icons/${data.weather[0].icon}.png`}
-          />
-          <p className="weather-description">{data.weather[0].description}</p>
+      <div className="weather-icon-time-sides-info">
+        <div className="icon-time">
+          <div className="display-date-clock">
+            <p className="date">{date.format("Do MMMM YYYY")}</p>
+            <div className="border_one"></div>
+            <p className="time">{date.format("HH:mm")}</p>
+          </div>
+          <div className="weather-icon-description">
+            <img
+              alt="weather"
+              className="weather-icon"
+              src={`icons/${data.weather[0].icon}.png`}
+            />
+            <p className="weather-description">{data.weather[0].description}</p>
+          </div>
         </div>
         <div className="sides-info">
           <div className="left-info">
