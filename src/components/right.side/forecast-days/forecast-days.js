@@ -16,28 +16,28 @@ const ForecastDays = ({ data }) => {
       imgSrc: `icons/${data.list[8].weather[0].icon}.png`,
       display: data.list[8].weather[0].description,
       tempMax: data.list[8].main.temp_max,
-      tempMin: data.list[12].main.temp_min,
+      tempMin: data.list[8].main.temp_min,
     },
     {
       name: moment().add(2, "days"),
       imgSrc: `icons/${data.list[16].weather[0].icon}.png`,
       display: data.list[16].weather[0].description,
       tempMax: data.list[16].main.temp_max,
-      tempMin: data.list[20].main.temp_min,
+      tempMin: data.list[16].main.temp_min,
     },
     {
       name: moment().add(3, "days"),
       imgSrc: `icons/${data.list[24].weather[0].icon}.png`,
       display: data.list[24].weather[0].description,
       tempMax: data.list[24].main.temp_max,
-      tempMin: data.list[28].main.temp_min,
+      tempMin: data.list[24].main.temp_min,
     },
     {
       name: moment().add(4, "days"),
       imgSrc: `icons/${data.list[32].weather[0].icon}.png`,
       display: data.list[32].weather[0].description,
       tempMax: data.list[32].main.temp_max,
-      tempMin: data.list[36].main.temp_min,
+      tempMin: data.list[32].main.temp_min,
     },
   ];
   return (

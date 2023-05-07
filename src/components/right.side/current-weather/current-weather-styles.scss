@@ -6,7 +6,11 @@
   width: 100%;
   @media screen and (max-width: 1250px) {
     height: 10%;
-    margin: 5px 0px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  @media screen and (max-width: 450px) {
+    margin: 0px;
   }
   .top-display {
     display: flex;
@@ -20,13 +24,16 @@
     @media screen and (max-width: 530px) {
       gap: 1rem;
     }
+    @media screen and (max-width: 450px) {
+      gap: 0.5rem;
+    }
     .temperature {
       font-size: 65px;
       font-weight: 525;
       letter-spacing: -5px;
       color: #f7f5f6;
-      margin-bottom: 15px;
-      margin-top: 35px;
+      margin-bottom: 20px;
+      margin-top: 20px;
       @media screen and (max-width: 1500px) {
         font-size: 50px;
       }
@@ -35,8 +42,8 @@
         font-size: 30px;
         margin: 0;
       }
-      @media screen and (max-width: 400px) {
-        font-size: 22px;
+      @media screen and (max-width: 450px) {
+        font-size: 18px;
       }
     }
     .parameter-row-wind {
@@ -54,6 +61,9 @@
         }
         @media screen and (max-width: 530px) {
           font-size: 14px;
+        }
+        @media screen and (max-width: 450px) {
+          font-size: 13px;
         }
         @keyframes fadeLeftToRight {
           from {
@@ -75,7 +85,7 @@
         @media screen and (max-width: 530px) {
           font-size: 12px;
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 450px) {
           font-size: 10px;
         }
       }
@@ -88,23 +98,22 @@
         @media screen and (max-width: 530px) {
           font-size: 12px;
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 450px) {
           font-size: 10px;
         }
       }
     }
     .city {
       color: #f7f5f6;
-      margin-top: 10px;
-      margin-bottom: 12px;
+      margin: 0;
       @media screen and (max-width: 1250px) {
         font-size: 14px;
       }
       @media screen and (max-width: 530px) {
         font-size: 12px;
       }
-      @media screen and (max-width: 400px) {
-        font-size: 11px;
+      @media screen and (max-width: 450px) {
+        font-size: 10px;
       }
     }
   }
