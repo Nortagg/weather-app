@@ -60,7 +60,7 @@
       }
       @media screen and (max-width: 400px) {
         width: 100%;
-        height: 45%;
+        height: 60%;
         margin: 0;
       }
 
@@ -138,8 +138,8 @@
           height: 110px;
         }
         @media screen and (max-width: 400px) {
-          width: 100px;
-          height: 90px;
+          width: 110px;
+          height: 80px;
         }
         .weather-icon {
           width: 120px;
@@ -201,8 +201,9 @@
         font-size: 12px;
       }
       @media screen and (max-width: 400px) {
+        flex-direction: row;
         font-size: 10px;
-        height: 45%;
+        height: 40%;
       }
 
       .left-info {
@@ -228,6 +229,7 @@
             margin: 3px 0px;
           }
           @media screen and (max-width: 400px) {
+            margin: 2px 0px;
             justify-content: center;
           }
         }
@@ -248,7 +250,10 @@
           margin: 5px 0;
         }
         @media screen and (max-width: 400px) {
-          width: 50%;
+          border-right: 1px solid rgb(172, 167, 167);
+          height: 40px;
+          width: 1px;
+          margin: 0;
         }
       }
       .right-info {
@@ -273,6 +278,7 @@
             margin: 3px 0px;
           }
           @media screen and (max-width: 400px) {
+            margin: 2px 0px;
             justify-content: center;
           }
         }
@@ -396,8 +402,8 @@
               height: 35px;
             }
             @media screen and (max-width: 400px) {
-              width: 30px;
-              height: 30px;
+              width: 25px;
+              height: 25px;
             }
           }
           .by-3h-temperature {
