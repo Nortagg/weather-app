@@ -34,7 +34,10 @@
       }
     }
     @media screen and (max-width: 400px) {
-      height: 65%;
+      height: 75%;
+    }
+    @media screen and (max-width: 360px) {
+      height: 70%;
     }
     .forecast-card {
       display: flex;

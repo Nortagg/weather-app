@@ -27,6 +27,9 @@
     @media screen and (max-width: 450px) {
       gap: 0.5rem;
     }
+    @media screen and (max-width: 400px) {
+      gap: 0.4rem;
+    }
     .temperature {
       font-size: 65px;
       font-weight: 525;
@@ -44,6 +47,9 @@
       }
       @media screen and (max-width: 450px) {
         font-size: 18px;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 22px;
       }
     }
     .parameter-row-wind {
@@ -64,6 +70,9 @@
         }
         @media screen and (max-width: 450px) {
           font-size: 13px;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 14px;
         }
         @keyframes fadeLeftToRight {
           from {
@@ -88,6 +97,9 @@
         @media screen and (max-width: 450px) {
           font-size: 10px;
         }
+        @media screen and (max-width: 400px) {
+          font-size: 14px;
+        }
       }
       .wind-speed {
         color: #576c69;
@@ -100,6 +112,9 @@
         }
         @media screen and (max-width: 450px) {
           font-size: 10px;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 14px;
         }
       }
     }
@@ -114,6 +129,9 @@
       }
       @media screen and (max-width: 450px) {
         font-size: 10px;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 14px;
       }
     }
   }

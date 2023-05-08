@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 75%;
   height: 100%;
-  background-color: #13232211;
+  background-color: #00000000;
   @media screen and (max-width: 1250px) {
     height: 50%;
     width: 100%;
@@ -17,7 +17,7 @@
     flex-direction: column;
     width: 95%;
     height: 70%;
-    background-color: #494e4ead;
+    background-color: rgba(95, 50, 110, 0.3);
     border-radius: 1rem;
     margin: auto 0px;
     @media screen and (max-width: 1250px) {
@@ -34,7 +34,7 @@
     }
     @media screen and (max-width: 400px) {
       flex-direction: column;
-      height: 65%;
+      height: 70%;
     }
     .icon-time {
       display: flex;
@@ -47,19 +47,16 @@
         width: 50%;
         height: 90%;
         margin-left: 20px;
-        margin-bottom: 10px;
+
         @media screen and (height: 600px) {
           height: 75%;
           margin-left: 5px;
-          margin-bottom: 5px;
         }
       }
       @media screen and (max-width: 650px) {
-        margin-left: 10px;
-        margin-bottom: 5px;
       }
       @media screen and (max-width: 400px) {
-        width: 100%;
+        width: 60%;
         height: 60%;
         margin: 0;
       }
@@ -85,6 +82,9 @@
           @media screen and (max-width: 450px) {
             font-size: 10px;
           }
+          @media screen and (max-width: 400px) {
+            font-size: 14px;
+          }
         }
         .border_one {
           border-left: 1px solid rgb(192, 177, 177);
@@ -101,6 +101,9 @@
           @media screen and (height: 600px) {
             height: 8px;
           }
+          @media screen and (max-width: 400px) {
+            height: 10px;
+          }
         }
         .time {
           font-size: 18px;
@@ -112,6 +115,9 @@
           @media screen and (max-width: 450px) {
             font-size: 10px;
           }
+          @media screen and (max-width: 400px) {
+            font-size: 14px;
+          }
         }
       }
       .weather-icon-description {
@@ -122,7 +128,7 @@
         width: 250px;
         height: 250px;
         border-radius: 1rem;
-        background-color: rgba(15, 15, 15, 0.452);
+        background-color: rgba(1, 30, 50, 0.5);
 
         @media screen and (max-width: 1250px) {
           width: 200px;
@@ -130,16 +136,16 @@
           margin-top: 5px;
         }
         @media screen and (max-width: 650px) {
-          width: 140px;
-          height: 140px;
+          width: 150px;
+          height: 150px;
         }
         @media screen and (max-width: 450px) {
           width: 110px;
           height: 110px;
         }
         @media screen and (max-width: 400px) {
-          width: 110px;
-          height: 80px;
+          width: 150px;
+          height: 90px;
         }
         .weather-icon {
           width: 120px;
@@ -160,6 +166,10 @@
             width: 45px;
             height: 45px;
           }
+          @media screen and (max-width: 400px) {
+            width: 60px;
+            height: 60px;
+          }
         }
         .weather-description {
           display: flex;
@@ -175,6 +185,9 @@
           @media screen and (max-width: 650px) {
             font-size: 8px;
           }
+          @media screen and (max-width: 400px) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -183,27 +196,42 @@
       justify-content: center;
       align-items: center;
       color: whitesmoke;
-      font-size: 16px;
-      width: 100%;
-      height: 20%;
+      font-size: 18px;
+      width: 450px;
+      height: 140px;
+      border-radius: 1rem;
+      background-color: rgba(1, 30, 50, 0.5);
       @media screen and (max-width: 1250px) {
         font-size: 16px;
+        height: 200px;
+        margin-right: 20px;
+        margin-left: 20px;
+        @media screen and (height: 600px) {
+          height: 100px;
+        }
       }
       @media screen and (max-width: 900px) {
-        font-size: 14px;
+        font-size: 12px;
       }
       @media screen and (max-width: 750px) {
         flex-direction: column;
-        width: 100%;
-        height: 90%;
       }
       @media screen and (max-width: 650px) {
-        font-size: 12px;
+        font-size: 10px;
+        height: 140px;
       }
       @media screen and (max-width: 400px) {
         flex-direction: row;
         font-size: 10px;
-        height: 40%;
+        width: 270px;
+        height: 70px;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+      }
+      @media screen and (max-width: 360px) {
+        width: 230px;
+        height: 60px;
       }
 
       .left-info {
@@ -341,7 +369,7 @@
           flex-direction: column;
           width: 90px;
           height: 145px;
-          background-color: #424948;
+          background-color: rgba(95, 50, 110, 0.5);
           color: #f7f5f6;
           font-size: 20px;
           border-radius: 1rem;
@@ -389,10 +417,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 45px;
-            height: 45px;
-            background-color: rgba(15, 15, 15, 0.452);
-            border-radius: 0.5rem;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(1, 30, 50, 0.5);
+            border-radius: 0.4rem;
             @media screen and (max-width: 1250px) {
               width: 40px;
               height: 40px;
