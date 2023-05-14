@@ -15,7 +15,12 @@
   @media screen and (max-width: 650px) {
     width: 90%;
   }
-
+  @media screen and (max-width: 400px) {
+    height: 80%;
+  }
+  @media screen and (max-width: 380px) {
+    height: 70%;
+  }
   .wrapper-forecast-card {
     display: flex;
     align-items: center;
