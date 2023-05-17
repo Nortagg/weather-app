@@ -28,10 +28,16 @@ function App() {
       })
       .catch((err) => console.log(err));
   };
-
+  console.log(currentWeather);
   return (
     <div className="container">
       <div className="wrapper-left-right">
+        {currentWeather && (
+          <img
+            className="img"
+            src={`weatherBackground/${currentWeather.weather[0].icon}.jpg`}
+          />
+        )}
         <LeftSide data={currentWeather} forecast={forecast} />
         <RightSide
           currentWeather={currentWeather}

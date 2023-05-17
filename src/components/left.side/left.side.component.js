@@ -97,7 +97,7 @@ const LeftSide = ({ data, forecast }) => {
   return (
     <div className="wrapper-left">
       <div className="weather-icon-time-sides-info">
-        <div className="icon-time">
+        <div className="icon-time-other-info">
           <div className="display-date-clock">
             <p className="date">{date.format("Do MMMM YYYY")}</p>
             <div className="border_one"></div>
@@ -111,18 +111,18 @@ const LeftSide = ({ data, forecast }) => {
             />
             <p className="weather-description">{data.weather[0].description}</p>
           </div>
-        </div>
-        <div className="sides-info">
-          <div className="left-info">
-            <p>Humidity: {data.main.humidity}%</p>
-            <p>Pressure: {data.main.pressure}hPa</p>
-            <p>Visibility: {data.visibility / 1000}km</p>
-          </div>
-          <div className="bordred-sides"></div>
-          <div className="right-info">
-            <p>Feels like: {Math.round(data.main.feels_like)}°C</p>
-            <p>Temp Max: {Math.round(data.main.temp_max)}°C</p>
-            <p>Temp Min: {Math.round(data.main.temp_min)}°C</p>
+          <div className="sides-info">
+            <div className="left-info">
+              <p>Humidity: {data.main.humidity}%</p>
+              <p>Pressure: {data.main.pressure}hPa</p>
+              <p>Visibility: {data.visibility / 1000}km</p>
+            </div>
+            <div className="bordred-sides"></div>
+            <div className="right-info">
+              <p>Feels like: {Math.round(data.main.feels_like)}°C</p>
+              <p>Temp Max: {Math.round(data.main.temp_max)}°C</p>
+              <p>Temp Min: {Math.round(data.main.temp_min)}°C</p>
+            </div>
           </div>
         </div>
       </div>
