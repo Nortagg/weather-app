@@ -28,13 +28,13 @@ function App() {
       })
       .catch((err) => console.log(err));
   };
-  console.log(currentWeather);
   return (
     <div className="container">
       <div className="wrapper-left-right">
         {currentWeather && (
           <img
             className="img"
+            alt="Weather"
             src={`weatherBackground/${currentWeather.weather[0].icon}.jpg`}
           />
         )}

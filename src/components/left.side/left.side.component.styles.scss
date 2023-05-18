@@ -78,10 +78,9 @@
           }
         }
         .border_one {
-          border-left: 1px solid rgb(192, 177, 177);
+          border-left: 1px solid rgb(223, 231, 231);
           margin: 0;
           height: 15px;
-          margin-top: 2px;
           @media screen and (max-width: 1250px) {
             margin-top: 0px;
             height: 10px;
@@ -133,7 +132,10 @@
         }
         @media screen and (max-width: 420px) {
           width: 300px;
-          height: 90px;
+          height: 80px;
+          @media screen and (max-height: 900px) {
+            height: 100px;
+          }
         }
         @media screen and (max-width: 360px) {
           width: 240px;
@@ -209,7 +211,10 @@
         @media screen and (max-width: 420px) {
           font-size: 11px;
           width: 300px;
-          height: 90px;
+          height: 80px;
+          @media screen and (max-height: 900px) {
+            height: 100px;
+          }
         }
         @media screen and (max-width: 360px) {
           font-size: 10px;
@@ -234,20 +239,19 @@
           }
         }
         .bordred-sides {
-          border-right: 1px solid rgba(172, 167, 167, 0.5);
+          border-right: 1px solid rgba(223, 231, 231, 0.3);
           height: 80px;
           @media screen and (max-width: 1250px) {
-            border-right: 1px solid rgba(172, 167, 167, 0.5);
+            border-right: 1px solid rgba(223, 231, 231, 0.3);
             height: 60px;
             margin: 0 5px;
           }
           @media screen and (max-width: 600px) {
-            border-right: 1px solid rgba(172, 167, 167, 0.5);
+            border-right: 1px solid rgba(223, 231, 231, 0.3);
             height: 50px;
           }
           @media screen and (max-width: 420px) {
-            border-right: 1px solid rgba(172, 167, 167, 0.5);
-            height: 45px;
+            border-right: 1px solid rgba(223, 231, 231, 0.3);
             width: 1px;
             margin: 0 8px;
           }
@@ -273,11 +277,17 @@
     }
   }
   .border_bottom {
-    border-top: 1px solid rgba(95, 50, 110, 0.3);
+    border-top: 1px solid rgba(223, 231, 231, 0.5);
     width: 93%;
     margin: auto 0;
     @media screen and (max-width: 1250px) {
       margin: 10px 0;
+    }
+    @media screen and (max-width: 420px) {
+      margin: 5px 0;
+      @media screen and (min-height: 800px) {
+        margin: 10px 0;
+      }
     }
   }
   .wrapper-bottom-display-wheater-info {
@@ -323,7 +333,7 @@
           flex-direction: column;
           width: 90px;
           height: 145px;
-          background-color: rgba(1, 30, 50, 0.7);
+          background-color: rgba(90, 35, 105, 0.6);
           color: #f7f5f6;
           font-size: 20px;
           border-radius: 1rem;
@@ -337,7 +347,14 @@
             margin-left: 10px;
           }
           @media screen and (max-width: 420px) {
-            margin-bottom: 20px;
+            width: 55px;
+            height: 80px;
+            margin-bottom: 0.3rem;
+            @media screen and (min-height: 800px) {
+              width: 60px;
+              height: 100px;
+              margin-bottom: 0.5rem;
+            }
           }
           .by-3h-time {
             margin-top: 0.8rem;
@@ -346,13 +363,25 @@
               margin: 0;
               font-size: 15px;
             }
+            @media screen and (max-width: 420px) {
+              font-size: 12px;
+              @media screen and (min-height: 800px) {
+                font-size: 15px;
+              }
+            }
           }
           .border_two {
-            border-top: 1px solid rgba(129, 155, 150, 0.479);
+            border-top: 1px solid rgba(223, 231, 231, 0.3);
             width: 45%;
             margin-bottom: 0.8rem;
             @media screen and (max-width: 1250px) {
               margin-bottom: 0.5rem;
+            }
+            @media screen and (max-width: 420px) {
+              margin-bottom: 0.3rem;
+              @media screen and (min-height: 800px) {
+                margin-bottom: 0.5rem;
+              }
             }
           }
           .icon-small-three {
@@ -361,7 +390,7 @@
             align-items: center;
             width: 50px;
             height: 50px;
-            background-color: rgba(165, 162, 162, 0.4);
+            background-color: rgba(120, 120, 120, 0.6);
             border-radius: 0.4rem;
             @media screen and (max-width: 1250px) {
               width: 40px;
@@ -371,6 +400,14 @@
               width: 35px;
               height: 35px;
             }
+            @media screen and (max-width: 420px) {
+              width: 30px;
+              height: 30px;
+              @media screen and (min-height: 800px) {
+                width: 35px;
+                height: 35px;
+              }
+            }
           }
           .by-3h-temperature {
             font-weight: 600;
@@ -379,6 +416,14 @@
             @media screen and (max-width: 1250px) {
               margin-bottom: 0;
               font-size: 16px;
+            }
+            @media screen and (max-width: 420px) {
+              font-size: 14px;
+              margin-top: 0.3rem;
+              @media screen and (min-height: 800px) {
+                font-size: 16px;
+                margin-top: 0.5rem;
+              }
             }
           }
         }

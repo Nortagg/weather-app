@@ -98,7 +98,7 @@
         }
       }
       .border-forecast {
-        border-left: 1px solid rgba(131, 128, 128, 0.301);
+        border-left: 1px solid rgba(223, 231, 231, 0.2);
         height: 30px;
         @media screen and (max-width: 650px) {
           margin-right: 5px;
@@ -163,7 +163,7 @@
   }
 }
 .border-middle {
-  border-bottom: 1px solid rgba(131, 128, 128, 0.301);
+  border-bottom: 1px solid rgba(223, 231, 231, 0.2);
   width: 75%;
   margin: 10px;
   @media screen and (max-width: 1250px) {
