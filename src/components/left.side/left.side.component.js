@@ -1,5 +1,7 @@
 import "./left.side.component.styles.scss";
 import moment from "moment/moment";
+import { WiHumidity } from "react-icons/wi";
+import { MdVisibility } from "react-icons/md";
 import { useState, useEffect } from "react";
 
 const LeftSide = ({ data, forecast }) => {
@@ -113,15 +115,29 @@ const LeftSide = ({ data, forecast }) => {
           </div>
           <div className="sides-info">
             <div className="left-info">
-              <p>Humidity: {data.main.humidity}%</p>
+              <p>
+                <div className="humidity-icon">
+                  <WiHumidity />
+                </div>
+                Humidity: {data.main.humidity}%
+              </p>
               <p>Pressure: {data.main.pressure}hPa</p>
-              <p>Visibility: {data.visibility / 1000}km</p>
+              <p>
+                <div className="visibility-icon">
+                  <MdVisibility />
+                </div>
+                Visibility: {data.visibility / 1000}km
+              </p>
             </div>
             <div className="bordred-sides"></div>
             <div className="right-info">
               <p>Feels like: {Math.round(data.main.feels_like)}°C</p>
-              <p>Temp Max: {Math.round(data.main.temp_max)}°C</p>
-              <p>Temp Min: {Math.round(data.main.temp_min)}°C</p>
+              <p className="max">
+                Temp Max: {Math.round(data.main.temp_max)}°C
+              </p>
+              <p className="min">
+                Temp Min: {Math.round(data.main.temp_min)}°C
+              </p>
             </div>
           </div>
         </div>

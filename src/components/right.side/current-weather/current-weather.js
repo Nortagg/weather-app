@@ -1,25 +1,75 @@
 import "./current-weather-styles.scss";
 import { BsWind } from "react-icons/bs";
 import { useState, useEffect } from "react";
+import {
+  WiDirectionUp,
+  WiDirectionDown,
+  WiDirectionUpRight,
+  WiDirectionRight,
+  WiDirectionDownRight,
+  WiDirectionDownLeft,
+  WiDirectionLeft,
+  WiDirectionUpLeft,
+} from "react-icons/wi";
 
 const CurrentWeather = ({ data }) => {
   const getWindDirection = (degree) => {
     if (degree > 337.5 || degree <= 22.5) {
-      return "North";
+      return (
+        <>
+          <WiDirectionUp />
+          North
+        </>
+      );
     } else if (degree > 22.5 && degree <= 67.5) {
-      return "Northeast";
+      return (
+        <>
+          <WiDirectionUpRight />
+          Northeast
+        </>
+      );
     } else if (degree > 67.5 && degree <= 112.5) {
-      return "East";
+      return (
+        <>
+          <WiDirectionRight />
+          East
+        </>
+      );
     } else if (degree > 112.5 && degree <= 157.5) {
-      return "Southeast";
+      return (
+        <>
+          <WiDirectionDownRight />
+          Southeast
+        </>
+      );
     } else if (degree > 157.5 && degree <= 202.5) {
-      return "South";
+      return (
+        <>
+          <WiDirectionDown />
+          South
+        </>
+      );
     } else if (degree > 202.5 && degree <= 247.5) {
-      return "Southwest";
+      return (
+        <>
+          <WiDirectionDownLeft />
+          Southwest
+        </>
+      );
     } else if (degree > 247.5 && degree <= 292.5) {
-      return "West";
+      return (
+        <>
+          <WiDirectionLeft />
+          West
+        </>
+      );
     } else if (degree > 292.5 && degree <= 337.5) {
-      return "Northwest";
+      return (
+        <>
+          <WiDirectionUpLeft />
+          Northwest
+        </>
+      );
     }
   };
   const [temperature, setTemperature] = useState(Math.round(data.main.temp));

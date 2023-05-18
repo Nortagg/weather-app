@@ -28,9 +28,12 @@
       gap: 1rem;
     }
     @media screen and (max-width: 450px) {
-      gap: 0.5rem;
+      gap: 0.7rem;
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 420px) {
+      gap: 1rem;
+    }
+    @media screen and (max-width: 300px) {
       gap: 0.4rem;
     }
     .temperature {
@@ -51,7 +54,7 @@
       @media screen and (max-width: 450px) {
         font-size: 18px;
       }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         font-size: 22px;
       }
     }
@@ -74,7 +77,7 @@
         @media screen and (max-width: 450px) {
           font-size: 13px;
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 420px) {
           font-size: 14px;
         }
         @keyframes fadeLeftToRight {
@@ -100,7 +103,7 @@
         @media screen and (max-width: 450px) {
           font-size: 10px;
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 420px) {
           font-size: 14px;
         }
       }
@@ -116,16 +119,18 @@
         @media screen and (max-width: 450px) {
           font-size: 10px;
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 420px) {
           font-size: 14px;
         }
       }
     }
     .city {
       color: #f7f5f6;
-      margin: 0;
+      margin-top: 3px;
+      margin-bottom: 0;
       @media screen and (max-width: 1250px) {
         font-size: 14px;
+        margin: 0;
       }
       @media screen and (max-width: 530px) {
         font-size: 12px;
@@ -133,7 +138,7 @@
       @media screen and (max-width: 450px) {
         font-size: 10px;
       }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 420px) {
         font-size: 14px;
       }
     }
