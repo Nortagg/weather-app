@@ -17,7 +17,7 @@
     flex-direction: column;
     width: 95%;
     height: 70%;
-    background-color: rgba(95, 50, 110, 0.2);
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 1rem;
     margin: auto 0px;
     @media screen and (max-width: 1250px) {
@@ -118,7 +118,7 @@
         width: 480px;
         height: 200px;
         border-radius: 1rem;
-        background-color: rgba(1, 30, 50, 0.7);
+        background-color: rgba(1, 30, 50, 0.8);
 
         @media screen and (max-width: 1250px) {
           width: 380px;
@@ -141,19 +141,21 @@
           width: 240px;
         }
         .weather-icon {
-          width: 120px;
-          height: 120px;
+          width: 100px;
+          height: 100px;
+          padding: 10px;
           @media screen and (max-width: 1250px) {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
+            padding: 5px;
           }
           @media screen and (max-width: 450px) {
             width: 50px;
             height: 50px;
           }
           @media screen and (max-width: 420px) {
-            width: 60px;
-            height: 60px;
+            width: 45px;
+            height: 45px;
           }
           @media screen and (max-width: 360px) {
             width: 45px;
@@ -166,10 +168,12 @@
           justify-content: center;
           font-size: 16px;
           text-transform: uppercase;
-          color: #f7f5f6;
-          margin: 5px 0;
+          color: rgb(182, 228, 235);
+          margin-top: 15x;
+          margin-bottom: 0px;
           @media screen and (max-width: 1250px) {
             font-size: 12px;
+            margin-top: 5px;
           }
           @media screen and (max-width: 450px) {
             font-size: 10px;
@@ -191,7 +195,7 @@
         width: 480px;
         height: 200px;
         border-radius: 1rem;
-        background-color: rgba(1, 30, 50, 0.7);
+        background-color: rgba(1, 30, 50, 0.8);
         @media screen and (max-width: 1250px) {
           font-size: 14px;
           width: 380px;
@@ -358,7 +362,7 @@
           flex-direction: column;
           width: 90px;
           height: 145px;
-          background-color: rgba(90, 35, 105, 0.6);
+          background-color: rgba(1, 30, 50, 0.8);
           color: #f7f5f6;
           font-size: 20px;
           border-radius: 1rem;
@@ -416,7 +420,7 @@
             width: 40px;
             height: 40px;
             padding: 5px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 0.4rem;
             @media screen and (max-width: 1250px) {
               width: 30px;
