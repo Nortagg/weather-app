@@ -17,14 +17,17 @@
       flex-direction: column-reverse;
       gap: 0px;
     }
-    @media screen and (width: 1024px) {
-      width: 90%;
-      height: 90vh;
+    @media screen and (max-width: 1024px) {
+      border: solid rgb(34, 46, 70) 4px;
+      border-radius: 0rem;
+      width: 70vw;
+      height: 100vh;
     }
-    @media screen and (max-width: 420px) {
-      border: solid rgb(34, 46, 70) 6px;
-      width: 90%;
-      height: 95vh;
+    @media screen and (max-width: 912px) {
+      border: none;
+      border-radius: 0rem;
+      width: 100vw;
+      height: 100vh;
     }
     .img {
       position: absolute;

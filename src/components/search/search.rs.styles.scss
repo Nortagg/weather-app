@@ -10,8 +10,15 @@
     margin-top: 0.5rem;
     width: 70%;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 912px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 540px) {
+    font-size: 16px;
     width: 90%;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 14px;
   }
 }
 .search-input input[type="text"] {
