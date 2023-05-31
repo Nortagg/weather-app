@@ -16,6 +16,7 @@
   @media screen and (max-width: 912px) {
     width: 100%;
   }
+
   .weather-icon-time-sides-info {
     display: flex;
     justify-content: space-evenly;
@@ -37,6 +38,9 @@
     }
     @media screen and (max-width: 912px) {
       height: 60%;
+    }
+    @media screen and (max-width: 540px) {
+      background-color: rgba(0, 0, 0, 0);
     }
     @media screen and (max-width: 414px) {
       height: 70%;
@@ -493,7 +497,7 @@
       height: 35%;
     }
     @media screen and (max-width: 375px) {
-      height: 40%;
+      height: 35%;
     }
 
     .bottom-display-wheater-info {
@@ -536,8 +540,9 @@
             height: 100px;
           }
           @media screen and (max-width: 375px) {
-            width: 60px;
-            height: 90px;
+            width: 55px;
+            height: 80px;
+            margin-bottom: 0rem;
           }
           .by-3h-time {
             margin-top: 0.8rem;
@@ -568,6 +573,7 @@
             }
             @media screen and (max-width: 375px) {
               width: 50%;
+              margin-bottom: 0.3rem;
             }
           }
           .icon-small-three {
@@ -611,7 +617,8 @@
               font-size: 16px;
             }
             @media screen and (max-width: 375px) {
-              font-size: 15px;
+              font-size: 14px;
+              margin-top: 0.3rem;
             }
           }
         }
