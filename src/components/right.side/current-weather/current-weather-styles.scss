@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  @media screen and (max-width: 1250px) {
+  @media screen and (max-width: 1280px) {
     height: 10%;
     margin-top: 5px;
     margin-bottom: 0;
@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @media screen and (max-width: 1250px) {
+    @media screen and (max-width: 1280px) {
       gap: 2rem;
       flex-direction: row;
     }
@@ -46,7 +46,7 @@
       @media screen and (max-width: 1500px) {
         font-size: 50px;
       }
-      @media screen and (max-width: 1250px) {
+      @media screen and (max-width: 1280px) {
         letter-spacing: -2px;
         font-size: 30px;
         margin: 0;
@@ -71,7 +71,7 @@
         font-size: 20px;
         animation: fadeLeftToRight 5s ease forwards;
         animation-iteration-count: infinite;
-        @media screen and (max-width: 1250px) {
+        @media screen and (max-width: 1280px) {
           font-size: 16px;
         }
         @media screen and (max-width: 530px) {
@@ -98,7 +98,7 @@
       .wind-side {
         color: #576c69;
         margin: 0;
-        @media screen and (max-width: 1250px) {
+        @media screen and (max-width: 1280px) {
           font-size: 14px;
         }
         @media screen and (max-width: 530px) {
@@ -117,7 +117,7 @@
       .wind-speed {
         color: #576c69;
         margin: 0;
-        @media screen and (max-width: 1250px) {
+        @media screen and (max-width: 1280px) {
           font-size: 14px;
         }
         @media screen and (max-width: 530px) {
@@ -138,7 +138,7 @@
       color: #f7f5f6;
       margin-top: 3px;
       margin-bottom: 0;
-      @media screen and (max-width: 1250px) {
+      @media screen and (max-width: 1280px) {
         font-size: 14px;
         margin: 0;
       }

@@ -13,9 +13,13 @@
     height: 80vh;
     border-radius: 0.8rem;
     border: solid rgb(34, 46, 70) 8px;
-    @media screen and (max-width: 1250px) {
+    @media screen and (max-width: 1280px) {
       flex-direction: column-reverse;
       gap: 0px;
+    }
+    @media screen and (width: 1024px) {
+      width: 90%;
+      height: 90vh;
     }
     @media screen and (max-width: 420px) {
       border: solid rgb(34, 46, 70) 6px;
