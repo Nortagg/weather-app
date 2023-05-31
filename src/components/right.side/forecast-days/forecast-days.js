@@ -5,6 +5,7 @@ const ForecastDays = ({ data }) => {
   console.log(data);
   const WEEK_DAYS = [
     {
+      className: "first-day",
       name: moment(),
       imgSrc: `icons/${data.list[0].weather[0].icon}.png`,
       display: data.list[0].weather[0].description,
@@ -47,7 +48,7 @@ const ForecastDays = ({ data }) => {
       <h2 className="five-days-title">5 days</h2>
       <div className="wrapper-forecast-card">
         {WEEK_DAYS.map((day, index) => (
-          <div className="forecast-card" key={index}>
+          <div className={`${day.className} forecast-card`} key={index}>
             <img alt="weather" className="icon-small" src={day.imgSrc} />
             <div className="date-display-container">
               <p className="forecast-date">{day.name.format("dddd, MMMM D")}</p>

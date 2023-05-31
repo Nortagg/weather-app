@@ -31,6 +31,7 @@ const LeftSide = ({ data, forecast }) => {
 
   const threeHours = [
     {
+      className: "first",
       name: moment()
         .hour(currentHour - (currentHour % 3))
         .minute(0)
@@ -147,7 +148,7 @@ const LeftSide = ({ data, forecast }) => {
         {threeHours.map((day, index) => (
           <div className="bottom-display-wheater-info" key={index}>
             <div className="by-3h-container">
-              <div className="by-3h-card">
+              <div className={`${day.className} by-3h-card`}>
                 <p className="by-3h-time">{day.name.format("HH:00")}</p>
                 <div className="border_two"></div>
                 <img

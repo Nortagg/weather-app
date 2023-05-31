@@ -38,6 +38,13 @@ function App() {
             src={`weatherBackground/${currentWeather.weather[0].icon}.jpg`}
           />
         )}
+        {currentWeather && (
+          <img
+            className="img-back"
+            alt="Weather"
+            src={`weatherBackground/${currentWeather.weather[0].icon}.jpg`}
+          />
+        )}
         <LeftSide data={currentWeather} forecast={forecast} />
         <RightSide
           currentWeather={currentWeather}
