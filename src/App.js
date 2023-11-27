@@ -17,7 +17,6 @@ function App() {
     const forecastFetch = fetch(
       `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
     );
-
     Promise.all([currentWeatherFetch, forecastFetch])
       .then(async (response) => {
         const weatherResponse = await response[0].json();
@@ -28,30 +27,41 @@ function App() {
       })
       .catch((err) => console.log(err));
   };
+
   return (
     <div className="container">
-      <div className="wrapper-left-right">
-        {currentWeather && (
-          <img
-            className="img"
-            alt="Weather"
-            src={`weatherBackground/${currentWeather.weather[0].icon}.jpg`}
+      {currentWeather ? (
+        <div className="wrapper-left-right">
+          {currentWeather && (
+            <img
+              className="img"
+              alt="Weather"
+              src={`weatherBackground/${currentWeather.weather[0].icon}.jpg`}
+            />
+          )}
+          {currentWeather && (
+            <img
+              className="img-back"
+              alt="Weather"
+              src={`weatherBackground/${currentWeather.weather[0].icon}.jpg`}
+            />
+          )}
+          <LeftSide data={currentWeather} forecast={forecast} />
+          <RightSide
+            currentWeather={currentWeather}
+            handleOnSearchChange={handleOnSearchChange}
+            forecast={forecast}
           />
-        )}
-        {currentWeather && (
-          <img
-            className="img-back"
-            alt="Weather"
-            src={`weatherBackground/${currentWeather.weather[0].icon}.jpg`}
+        </div>
+      ) : (
+        <div>
+          <RightSide
+            currentWeather={currentWeather}
+            handleOnSearchChange={handleOnSearchChange}
+            forecast={forecast}
           />
-        )}
-        <LeftSide data={currentWeather} forecast={forecast} />
-        <RightSide
-          currentWeather={currentWeather}
-          handleOnSearchChange={handleOnSearchChange}
-          forecast={forecast}
-        />
-      </div>
+        </div>
+      )}
     </div>
   );
 }

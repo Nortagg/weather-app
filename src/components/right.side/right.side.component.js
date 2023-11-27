@@ -5,7 +5,12 @@ import ForecastDays from "./forecast-days/forecast-days";
 import SearchRS from "../search/search.rs";
 import { useState } from "react";
 
-const RightSide = ({ handleOnSearchChange, currentWeather, forecast }) => {
+const RightSide = ({
+  handleOnSearchChange,
+  currentWeather,
+  forecast,
+  data,
+}) => {
   const [isRsSearch, setIsRsSearch] = useState(false);
 
   const handleSearchbarChange = () => {
@@ -13,19 +18,35 @@ const RightSide = ({ handleOnSearchChange, currentWeather, forecast }) => {
   };
 
   return (
-    <div className="wrapper-right">
-      {isRsSearch ? (
-        <SearchRS onSearchChange={handleOnSearchChange} />
-      ) : (
-        <Search onSearchChange={handleOnSearchChange} />
-      )}
-      <button className="button" onClick={handleSearchbarChange}>
-        {isRsSearch ? "Search for All" : "Search in Serbia"}
-      </button>
+    <>
+      {currentWeather ? (
+        <div className="wrapper-right">
+          {isRsSearch ? (
+            <SearchRS onSearchChange={handleOnSearchChange} />
+          ) : (
+            <Search onSearchChange={handleOnSearchChange} />
+          )}
+          <button className="button" onClick={handleSearchbarChange}>
+            {isRsSearch ? "Search for All" : "Search in Serbia"}
+          </button>
 
-      {currentWeather && <CurrentWeather data={currentWeather} />}
-      {forecast && <ForecastDays data={forecast} />}
-    </div>
+          {currentWeather && <CurrentWeather data={currentWeather} />}
+          {forecast && <ForecastDays data={forecast} />}
+        </div>
+      ) : (
+        <div className="welcome-page">
+          <h1 className="welcome-message">Welcome</h1>
+          {isRsSearch ? (
+            <SearchRS onSearchChange={handleOnSearchChange} />
+          ) : (
+            <Search onSearchChange={handleOnSearchChange} />
+          )}
+          <button className="button" onClick={handleSearchbarChange}>
+            {isRsSearch ? "Search for All" : "Search in Serbia"}
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 export default RightSide;

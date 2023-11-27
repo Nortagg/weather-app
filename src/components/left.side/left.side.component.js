@@ -13,12 +13,7 @@ const LeftSide = ({ data, forecast }) => {
     return () => clearInterval(interval);
   }, []);
 
-  if (!data)
-    return (
-      <div className="loading">
-        Enter location to <br /> get weather info.
-      </div>
-    );
+  if (!data) return null;
 
   const currentHour = moment().hour();
   const hoursSinceLastPeriod = currentHour % 3;

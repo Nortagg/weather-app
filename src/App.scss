@@ -35,6 +35,16 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      animation: Fade 4s ease;
+      border-radius: 0.3rem;
+    }
+    @keyframes Fade {
+      from {
+        opacity: 0.1;
+      }
+      to {
+        opacity: 1;
+      }
     }
     .img-back {
       position: fixed;
@@ -44,6 +54,15 @@
       object-fit: cover;
       filter: blur(4px);
       transform: scale(1.1);
+      animation: Blur 4s ease;
+    }
+    @keyframes Blur {
+      from {
+        filter: blur(0px);
+      }
+      to {
+        filter: blur(4px);
+      }
     }
   }
 }
