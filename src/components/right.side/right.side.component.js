@@ -45,7 +45,7 @@ const RightSide = ({
             className="button-search-rs-all"
             onClick={handleSearchbarChange}
           >
-            {isRsSearch ? "All" : "RS"}
+            {isRsSearch ? "All" : "Rs"}
           </button>
         </div>
       )}
